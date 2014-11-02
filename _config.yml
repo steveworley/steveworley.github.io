@@ -1,0 +1,24 @@
+# Build settings
+markdown:         kramdown
+highlighter:      rouge
+
+# Setup
+title:            Steve Worley
+email:            sj.worley88@gmail.com
+baseurl:          "" # the subpath of your site, e.g. /blog/
+url:              "http://steveworley.github.io" # the base hostname & protocol for your site
+paginate:         5
+
+social:
+  github:         steveworley
+  twitter:        sjworley
+  linkedin:       245279114
+
+author:
+  name:           'Steve Worley'
+  url:            'https://steveworley.me'
+
+version:          1.0.0
+
+github:
+  repo:           https://github.com/steveworley/steveworley.github.io

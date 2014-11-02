@@ -1,0 +1,45 @@
+<section class="timeline skills" id="skills">
+
+  <div class="line row timeline-margin">
+    <div class="content-wrap">
+      <div class="col-md-1 bg1 timeline-space full-height hidden-sm hidden-xs"></div>
+      <div class="col-md-2 timeline-progress hidden-sm hidden-xs full-height"></div>
+      <div class="col-md-9 bg1 full-height"></div>
+    </div>
+  </div>
+
+  <div class="line row">
+    <div class="col-md-1 bg1 timeline-space full-height hidden-sm hidden-xs"></div>
+    <div class="col-md-2 timeline-progress hidden-sm hidden-xs timeline-title full-height"></div>
+    <div class="col-md-8 content-wrap bg1">
+      <h2 class="section-title">Skills</h2>
+    </div>
+    <div class="col-md-1 bg1 timeline-space full-height hidden-sm hidden-xs"></div>
+  </div>
+
+  {% for item in site.data.skills %}
+    <div class="line row">
+      <div class="col-md-1 bg1 timeline-space full-height hidden-sm hidden-xs"></div>
+      <div class="col-md-2 timeline-progress hidden-sm hidden-xs full-height timeline-point "></div>
+      <div class="col-md-8 content-wrap bg1">
+        <div class="line-content">
+          <h3 class="section-item-title-1">{{ item.name }}</h3>
+          <ul class="skills-list">
+            {% for skill in item.skills %}
+              <li>
+                <div class="progress">
+                  <div class="progress-bar progress-bar-{{ forloop.index }}" role="progressbar" data-percent="{{ skill.percent }}%" style="width: {{ skill.percent }}%;">
+                    <span class="sr-only">{{ skill.percent }}% Complete</span>
+                  </div>
+                  <span class="progress-type">{{ skill.name }}</span>
+                  <span class="progress-completed">{{ skill.percent }}%</span>
+                </div>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-1 bg1 timeline-space full-height hidden-sm hidden-xs"></div>
+    </div>
+  {% endfor %}
+</section>

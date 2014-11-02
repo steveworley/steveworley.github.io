@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+  <body data-spy="scroll" data-target="#side-menu">
+
+    {% include header.html %}
+
+    {% include sidemenu.html %}
+
+    <section id="content-body" class="container animated">
+      <div class="row" id="intro">
+        <!-- Header Colors -->
+        <div class="col-md-10 col-sm-10  col-md-offset-2 col-sm-offset-1 clearfix top-colors">
+          <div class="top-color top-color1"></div>
+          <div class="top-color top-color2"></div>
+          <div class="top-color top-color3"></div>
+          <div class="top-color top-color1"></div>
+          <div class="top-color top-color2"></div>
+        </div>
+        <div class="col-md-10 col-sm-10 col-md-offset-2 col-sm-offset-1 resume-container">
+          <!-- Header Buttons -->
+          <div class="row">
+            <div class="header-buttons col-md-10 col-md-offset-1">
+              <!-- Download Resume Button -->
+              <a href="{{ "/img/resume.pdf" }}" class="btn btn-default btn-top-resume"><i class="fa fa-download"></i><span class="btn-hide-text">Download my resume</span></a>
+              <!-- /Download Resume Button -->
+              <!-- Mail Button -->
+              <a href="mailto:sj.worley88@gmail.com" class="btn btn-default btn-top-message"><i class="fa fa-envelope-o"></i><span class="btn-hide-text">Send me a message</span></a>
+              <!-- /Mail Button -->
+            </div>
+          </div>
+          {{ content }}
+        </div>
+      </div>
+    </section>
+
+    {% include footer.html %}
+
+  </body>
+
+</html>

@@ -1,0 +1,34 @@
+-
+  name: Flight Centre
+  role: Senior Drupal Developer
+  date: June 2012 - Current
+  location: Brisbane
+  description: "At Flight Centre my role has introduced me to a lot of new technologies and oportunites. I have been responsible for assisting with moving the development team to an Agile workflow that is centred around Git. I have worked with a variety of software including: Apache Solr, Drupal, IBM WebSphere, Git. My role has required me to write code in a variety of languages including like Python and Ruby but I have been focused on PHP and Javascript development."
+  points:
+    - Git workflow with a team of 50 developers (world wide)
+    - Drupal module development
+    - Javascript/jQuery code standards
+    - Deployments of corporate code base
+    - Global support for a backend migration
+
+-
+  name: Web Cirlce
+  role: Web Developer
+  date: January 2009 - June 2012
+  location: Gold Coast
+  description: Web Cirlce was my first real developer role, I was involved in the whole client flow from gathering requirements to working through until project sign off.
+  points:
+    - Used a variety of open source CMS's including WordPress, Drupal, Joomla
+    - Used open source ecommerce solutions including Magento and OsCommerce
+    - Responsible for search engine optimsation reports and strategy implementations
+    - Managed server clusters for clients
+    - Prepared client documentation and assisted with training
+
+-
+  name: If We Can Dream
+  role: Web Developer
+  date: September 2008 - December 2009
+  location: Gold Coast
+  description: "My career started with a 3 month internship at If We Can Dream. This was a small record label on the Gold Coast and I was working with a team to build them a web presence."
+  points:
+    - Working with Drupal

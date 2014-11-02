@@ -1,1 +1,94 @@
-Hello World
+---
+layout: default
+---
+
+<!-- =============== PROFILE INTRO ====================-->
+
+{% include profile-intro.html %}
+
+<!-- ============  /PROFILE INTRO ================= -->
+
+<!-- ============  TIMELINE ================= -->
+<div class="timeline-wrap">
+  <div class="timeline-bg">
+
+    <section class="timeline education" id="education">
+
+      <div class="line row timeline-margin">
+        <div class="content-wrap">
+          <div class="col-md-1 bg1 timeline-space full-height hidden-sm hidden-xs"></div>
+          <div class="col-md-2 timeline-progress hidden-sm hidden-xs full-height"></div>
+          <div class="col-md-9 bg1 full-height"></div>
+        </div>
+      </div>
+
+      <div class="line row">
+        <div class="col-md-1 bg1 timeline-space full-height hidden-sm hidden-xs"></div>
+        <div class="col-md-2 timeline-progress hidden-sm hidden-xs timeline-title full-height">
+        </div>
+        <div class="col-md-8 content-wrap bg1">
+          <h2 class="section-title">Posts</h2>
+        </div>
+        <div class="col-md-1 bg1 timeline-space full-height hidden-sm hidden-xs"></div>
+      </div>
+
+      {% for post in paginator.posts %}
+        <div class="line row">
+          <div class="col-md-1 bg1 timeline-space full-height hidden-sm hidden-xs"></div>
+          <div class="col-md-2 timeline-progress hidden-sm hidden-xs full-height timeline-education "></div>
+          <div class="col-md-8 content-wrap bg1">
+            <div class="line-content line-content-education">
+              <h3 class="section-item-title-1"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3>
+              <h4 class="post-time"><span class="post-date"><i class="fa fa-calendar"></i> {{ post.date | date_to_string }}</span></span></h4>
+              <div class="post-description">
+                {{ post.excerpt }}
+                <p><a href="{{ site.baseurl }}{{ post.url }}" class="btn btn-primary"> Read more... </a></p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-1 bg1 timeline-space full-height hidden-sm hidden-xs"></div>
+        </div>
+      {% endfor %}
+
+    </section>
+
+    <section class="timeline profile-infos">
+      <div class="line row timeline-margin">
+        <div class="content-wrap">
+          <div class="col-md-1 bg1 timeline-space full-height hidden-sm hidden-xs"></div>
+          <div class="col-md-2 timeline-progress hidden-sm hidden-xs full-height"></div>
+          <div class="col-md-9 bg1 full-height"></div>
+        </div>
+      </div>
+      <div class="line row line-thank-you">
+        <div class="col-md-1 bg1 timeline-space full-height hidden-sm hidden-xs"></div>
+        <div class="col-md-2 timeline-progress hidden-sm hidden-xs full-height timeline-point" style="height: 78px!important;"></div>
+        <div class="col-md-8 content-wrap bg1">
+          <div class="line-content">
+            <nav>
+              <ul class="pager">
+                {% if paginator.next_page %}
+                  <li class="previous"><a href=href="{{ site.baseurl }}page{{paginator.next_page}}"><i class="fa fa-arrow-left"></i> Older</a></li>
+                {% else %}
+                  <li class="previous disabled"><a href="#"><i class="fa fa-arrow-left"></i> Older</a></li>
+                {% endif %}
+                {% if paginator.previous_page %}
+                  {% if paginator.page == 2 %}
+                    <li class="next"><a href="{{ site.baseurl }}">Newer <i class="fa fa-arrow-right"></i></a></li>
+                  {% else %}
+                    <li class="next"><a href="{{ site.baseurl }}page{{paginator.previous_page}}">Newer <i class="fa fa-arrow-right"></i></a></li>
+                  {% endif %}
+                {% else %}
+                  <li class="next disabled"><a href="#">Newer <i class="fa fa-arrow-right"></i></a></li>
+                {% endif %}
+              </ul>
+            </nav>
+
+          </div>
+        </div>
+        <div class="col-md-1 bg1 timeline-space full-height hidden-sm hidden-xs"></div>
+      </div>
+    </section>
+
+  </div>
+</div>
