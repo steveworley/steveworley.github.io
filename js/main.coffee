@@ -9,11 +9,11 @@ do ( $ = jQuery) ->
       styler: 'fb'
 
 
-    $('.side-menu-open').click ->
+    $('.side-menu-open').on 'click', ->
       $('.side-menu').animate left : '0px', 600, 'easeOutCubic'
       false
 
-    $('#side-menu-close').click (event) ->
+    $('#side-menu-close').on 'click', (event) ->
       element = $ '.side-menu'
       element.animate left: "-#{ element.outerWidth() }px", 600, 'easeInCubic'
       false
@@ -53,7 +53,7 @@ do ( $ = jQuery) ->
     , 300
 
     $(window).resize ->
-      $('.full-height').each (i, el) ->
+      $('.full-height').each ->
         element = $ this
         element.css height: element.closest('.line').find('.content-wrap').height()
 

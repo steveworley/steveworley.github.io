@@ -68,15 +68,15 @@ layout: default
             <nav>
               <ul class="pager">
                 {% if paginator.next_page %}
-                  <li class="previous"><a href=href="{{ site.baseurl }}page{{paginator.next_page}}"><i class="fa fa-arrow-left"></i> Older</a></li>
+                  <li class="previous"><a href="{{ site.url }}/page{{paginator.next_page}}"><i class="fa fa-arrow-left"></i> Older</a></li>
                 {% else %}
                   <li class="previous disabled"><a href="#"><i class="fa fa-arrow-left"></i> Older</a></li>
                 {% endif %}
                 {% if paginator.previous_page %}
                   {% if paginator.page == 2 %}
-                    <li class="next"><a href="{{ site.baseurl }}">Newer <i class="fa fa-arrow-right"></i></a></li>
+                    <li class="next"><a href="{{ site.url }}">Newer <i class="fa fa-arrow-right"></i></a></li>
                   {% else %}
-                    <li class="next"><a href="{{ site.baseurl }}page{{paginator.previous_page}}">Newer <i class="fa fa-arrow-right"></i></a></li>
+                    <li class="next"><a href="{{ site.url }}/page{{paginator.previous_page}}">Newer <i class="fa fa-arrow-right"></i></a></li>
                   {% endif %}
                 {% else %}
                   <li class="next disabled"><a href="#">Newer <i class="fa fa-arrow-right"></i></a></li>

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Javascript loop performance
+title: YouTube z-index fix
 tags: css, youtube, flash, website design
 ---
 
