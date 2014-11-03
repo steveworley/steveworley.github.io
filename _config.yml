@@ -1,6 +1,6 @@
 # Build settings
 markdown:         kramdown
-highlighter:      rouge
+highlighter:      pygments
 
 # Setup
 title:            Steve Worley
