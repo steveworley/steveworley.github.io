@@ -8,6 +8,8 @@ do ( $ = jQuery) ->
     $('html').niceScroll
       styler: 'fb'
 
+    $('#comments-form').pooleApi
+      secret: '21b2304a-d0f7-4a05-9c88-9d8eec19ec8c'
 
     $('.side-menu-open').on 'click', ->
       $('.side-menu').animate left : '0px', 600, 'easeOutCubic'

@@ -12,4 +12,34 @@ layout: default
     {{ content }}
   </article>
 
+  <section class="post-comments">
+    <div class="comments"></div>
+    <h2>Leave a reply...</h2>
+    <form role="form" id="comments-form" action="http://pooleapp.com/stash/addde3f5-d0aa-4c71-8aba-0dc1c093b48e/" method="post">
+      <div class="form-group">
+        <label for="exampleInputEmail1">Email address</label>
+        <input type="email" class="form-control" name="email" placeholder="Enter email">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputEmail1">Comment</label>
+        <textarea name="comment" class="form-control"></textarea>
+      </div>
+      <div class="form-group">
+        <input type="submit" class="form-control" value="Comment!" />
+      </div>
+    </form>
+  </section>
+
+  {% raw %}
+    <script type="text/twig" class="comments-template">
+      <h2>Comments</h2>
+      {% for comment in comments %}
+        <div class="comment">
+          <h4>{{comment.email}}</h4>
+          <p class="post-meta">{{comment.created}}</p>
+          <p class="comment-contet">{{comment.comment}}</p>
+        </div>
+      {% endfor %}
+    </script>
+  {% endraw %}
 </div>
