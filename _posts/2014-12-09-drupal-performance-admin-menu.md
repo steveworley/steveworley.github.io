@@ -18,11 +18,13 @@ The main cause is clearing the `cache_clear_all(isset($uid) ? $cid : '*', 'cache
 
 One solution we came up with was having the clearing and rebuilding of the menu cache handled by a cron task. This way it could be done behind the scenes and would not impact on the sites overall performance too much, you can also control how frequently the menu gets rebuilt (and even trigger manual clears with drush or the menu itself).
 
-*To start*
+__To Start__
+
 - Remove line #806 from `hook_flush_caches` in `admin_menu.module`
 - Add a `hook_cron` implementation that looks like:
 
 {% highlight php %}
+<?php
 function admin_menu_flush_caches($uid = NULL) {
   # ... snip.
 
@@ -33,6 +35,7 @@ function admin_menu_flush_caches($uid = NULL) {
 {% endhighlight %}
 
 {% highlight php %}
+<?php
 function admin_menu_cron() {
   global $user;
   global $base_url;
