@@ -1,13 +1,11 @@
-<div class="loader" id="page-loader">
-  <div class="loading-wrapper">
-    <div class="tp-loader spinner"></div>
-    <!-- Edit With Your Name -->
-    <div class="side-menu-name">
-      Steve <strong>Worley</strong>
-    </div>
-    <!-- /Edit With Your Name -->
-    <!-- Edit With Your Job -->
-    <p class="side-menu-job">Web Developer</p>
-    <!-- /Edit With Your Job -->
-  </div>
-</div>
+<meta charset="utf-8">
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>{% if page.title %}{{ page.title }} -- {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+<meta name="description" content="{{ site.description }}">
+
+
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link href='https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,700' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{{ site.data.global.url }}/css/style.css" type="text/css">

@@ -1,7 +1,11 @@
 ---
 layout: post
 title: CSS attribute Selectors
-tags: attribute selectors, advanced css selectors, css, selectors
+tags:
+  - Attribute Selectors
+  - Advanced CSS Selectors
+  - CSS
+  - Selectors
 ---
 
 An interesting and somewhat unused feature of CSS is that it allows you to target elements based on the attributes of those elements. You are probably familiar with the more common ones; like type when trying to select different forms of input elements, however you can actually target quite a few other attributes in this way, modern browsers will allow you to select any attribute name however it will only work in `IE7` and `IE8` if a `!DOCTYPE` is specified. You can also use operational selectors (not just equals) similar to jQuery. These operators include:

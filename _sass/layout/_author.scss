@@ -1,0 +1,12 @@
+//
+// @file
+// Author specific styles.
+//
+
+aside {
+  @include header;
+
+  p {
+    color: rgba(0,0,0,.5);
+  }
+}

@@ -1,7 +1,9 @@
 ---
 layout: post
 title: Javascript date compatibility
-tags: javascript, date
+tags:
+  - Javascript
+  - date
 ---
 
 Every browser implements Javascript in their own way. One of the most notable differences lies in each browsers implementation of the `Date` object. A `date` object can be instantiated with a parameter which is a date, however the formats in which each browser can create the object is quite different.

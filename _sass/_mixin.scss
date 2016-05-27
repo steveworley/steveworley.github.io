@@ -1,0 +1,33 @@
+@mixin header {
+  text-align: center;
+  h1 {
+    margin-bottom: 0;
+  }
+}
+
+@mixin line-behind($selector) {
+  position: relative;
+
+  #{$selector} {
+    background: white;
+    display: inline-block;
+    padding: 0 10px;
+    position: relative;
+    z-index: 1;
+  }
+
+  &:after {
+    border-top: 1px solid rgba(0,0,0,.4);
+    content: "";
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}
+
+@mixin material-button {
+  
+}

@@ -1,0 +1,15 @@
+<article itemscope itemtype="http://schema.org/BlogPosting" class="text-center">
+  <header>
+    <div class="meta">
+      <span><i class="fa fa-tag"></i> {{ post.tags[0] }}</span>
+      <span>{{ post.date | date: "%-d-%b-%y" }}</span>
+    </div>
+    <h1 itemprop="name"><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h1>
+  </header>
+  <section itemprop="description">
+    {{ post.excerpt }}
+  </section>
+  <footer class="clearfix">
+    <div class="pull-right"><a href="{{ post.url | prepend: site.baseurl }}" class="btn">Read more</a></div>
+  </footer>
+</article>

@@ -1,0 +1,27 @@
+<article itemscope itemtype="http://schema.org/BlogPosting">
+  <div class="col-lg-6 col-sm-12 center-block">
+
+    <header>
+      <div class="row">
+        <div class="col-sm-12">
+          <p class="post-date"><span>{{ post.date | date: "%B %d %Y" }}</span></p>
+          <h1 itemprop="name">{{ post.title }}</h1>
+        </div>
+      </div>
+    </header>
+
+    <section itemprop="description">
+      {{ content }}
+    </section>
+
+    <footer>
+      <div class="meta">
+
+        {% for tag in post.tags %}
+          <span class="btn btn-primary btn-xs"><i class="fa fa-tag"></i> {{ tag }}</span>
+        {% endfor %}
+      </div>
+    </footer>
+
+  </div>
+</article>
