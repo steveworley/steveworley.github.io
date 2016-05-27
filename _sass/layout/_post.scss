@@ -1,0 +1,21 @@
+//
+// @file
+// Post page styles.
+//
+
+#back {
+  margin: 10px;
+}
+
+article {
+  padding-bottom: $font-size-base * 2;
+  header {
+    text-align: center;
+    h1 { margin-top: 0; padding-bottom: $font-size-base; }
+    p { @include line-behind('span'); }
+  }
+
+  .meta {
+    text-align: center;
+  }
+}

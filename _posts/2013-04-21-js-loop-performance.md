@@ -1,7 +1,15 @@
 ---
 layout: post
 title: Javascript loop performance
-tags: $.each, do while loop, for loop, foreach loop, javascript, jQuery, looping methods, while loop
+tags:
+  - jQuery
+  - $.each
+  - do while loop
+  - for loop
+  - foreach loop
+  - javascript
+  - looping methods
+  - while loop
 ---
 
 With the wide adoption of jQuery, looping over datasets is easier than ever. I have found that while the different looping functions have different applications each can have a significant impact on your application.

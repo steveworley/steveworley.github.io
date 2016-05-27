@@ -1,7 +1,8 @@
 ---
 layout: post
 title: Drupal Performance Admin Menu
-tags: Drupal performance
+tags:
+  - Drupal performance
 ---
 
 Admin Menu is a great module! It allows your to provide quick and easy navigation to the most used parts of your Drupal administration experience. It provides cache clearing and searching and an array of other nice to haves that don't ship with the default Drupal administration menu. However due to the way that the menu needs to be kept up-to-date this module does not scale very well and can be a prime contributor to slow cache rebuilds and memory issues for larger Drupal sites.

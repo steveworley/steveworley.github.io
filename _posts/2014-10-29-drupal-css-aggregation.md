@@ -1,7 +1,11 @@
 ---
 layout: post
 title: Drupal CSS Aggregation
-tags: drupal, css aggregation, drupal css, drupal_add_css
+tags:
+  - Drupal
+  - CSS Aggregation
+  - Drupal CSS
+  - drupal_add_css
 ---
 
 I have often read that **Drupal is dumb when it comes to aggregating CSS files** and up until recently I took that at face value. However I decided to delve a little into the aggregation routine a little to see exactly what Drupal is doing under the hood.

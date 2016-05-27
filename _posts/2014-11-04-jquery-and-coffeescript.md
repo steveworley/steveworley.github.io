@@ -1,7 +1,10 @@
 ---
 layout: post
 title: Using jQuery with CoffeeScript
-tags: coffeescript, jquery, javascript
+tags:
+  - CoffeeScript
+  - jQuery
+  - Javascript
 ---
 
 [CoffeeScript][coffee] is a language that compiles into Javascript. It aims to abstract the difficult and awkward parts of Javascript and introduce things that are missing (in the mind of the developer). The syntax that is used by `CoffeeScript` is more concise and eliminates the need for many of the parenthesis and semi-colons that you typically would need to write.
