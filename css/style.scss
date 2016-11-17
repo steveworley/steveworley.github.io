@@ -6,9 +6,11 @@
 @import '../_sass/syntax-highlighting';
 
 // Layout controls.
+@import '../_sass/layout/navigation';
 @import '../_sass/layout/post';
 @import '../_sass/layout/block';
 @import '../_sass/layout/author';
 
 // Import styles.
 @import '../_sass/style/button';
+@import '../_sass/style/fonts';

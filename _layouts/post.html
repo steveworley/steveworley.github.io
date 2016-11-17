@@ -4,13 +4,17 @@ layout: default
 
 <div class="container-fluid">
 
-  <a id="back" title="Back to home page" href="{{ site.url }}" class="btn btn-raised btn-fixed btn-info btn-circle"><i class="fa fa-arrow-left"></i></a>
-
   <div class="row">
 
     {% assign post = page %}
     {% include post/single.html %}
 
+  </div>
+
+  <div class="nav navbar navbar-default navbar-fixed navbar-fixed-bottom js-enabled js-show-on-scroll">
+    <ul class="nav">
+      <li><a href="{{ site.url }}" title="Back to home page"><i class="fa fa-arrow-left"></i> Back</a></li>
+    </ul>
   </div>
 
 </div>
