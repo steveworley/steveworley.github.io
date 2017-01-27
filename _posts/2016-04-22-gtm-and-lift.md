@@ -1,6 +1,8 @@
 ---
 layout: post
 title: Tracking with Google Tag Manager and Lift
+comments: true
+disqus_id: tracking-gtm-lift
 tags:
   - Acquia Lift
   - Drupal

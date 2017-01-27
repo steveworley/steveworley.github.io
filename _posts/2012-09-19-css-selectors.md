@@ -1,6 +1,8 @@
 ---
 layout: post
 title: CSS attribute Selectors
+disqus_id: css-attribute-selector
+comments: true
 tags:
   - Attribute Selectors
   - Advanced CSS Selectors

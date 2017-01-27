@@ -9,6 +9,9 @@ layout: default
     {% assign post = page %}
     {% include post/single.html %}
 
+    {% if post.comments %}
+      {% include disqus.html %}
+    {% endif %}
   </div>
 
   <div class="nav navbar navbar-default navbar-fixed navbar-fixed-bottom js-enabled js-show-on-scroll">

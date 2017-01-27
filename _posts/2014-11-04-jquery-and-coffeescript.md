@@ -1,6 +1,8 @@
 ---
 layout: post
 title: Using jQuery with CoffeeScript
+disqus_id: jquery-coffeescript
+comments: true
 tags:
   - CoffeeScript
   - jQuery

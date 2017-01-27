@@ -1,5 +1,7 @@
 ---
 layout: post
+comments: true
+disqus_id: youtube-z-index
 title: YouTube z-index fix
 tags: css, youtube, flash, website design
 ---

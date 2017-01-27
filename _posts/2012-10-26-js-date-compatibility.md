@@ -1,6 +1,8 @@
 ---
 layout: post
 title: Javascript date compatibility
+disqus_id: javascript-date
+comments: true
 tags:
   - Javascript
   - date

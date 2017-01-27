@@ -1,6 +1,8 @@
 ---
 layout: post
 title: Javascript loop performance
+disqus_id: javascript-loop-perfromance
+comments: true
 tags:
   - jQuery
   - $.each

@@ -1,6 +1,8 @@
 ---
 layout: post
 title: Automate your Drupal 8 project testing with Travis CI
+comments: true
+disqus_id: automated-testing-drupal-8
 tags:
   - Drupal 8
   - Automated Testing

@@ -1,6 +1,8 @@
 ---
 layout: post
 title: Drupal Performance Admin Menu
+disqus_id: perfroamnce-admin-menu-drupal-7
+comments: true
 tags:
   - Drupal performance
 ---

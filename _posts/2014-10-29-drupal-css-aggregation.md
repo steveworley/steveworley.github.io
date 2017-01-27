@@ -1,6 +1,8 @@
 ---
 layout: post
 title: Drupal CSS Aggregation
+disqus_id: css-aggregation-drupal-7
+comments: true
 tags:
   - Drupal
   - CSS Aggregation
