@@ -89,7 +89,7 @@ script: SIMPLETEST_BASE_URL=http://127.0.0.1:8080 SIMPLETEST_DB=mysql://root:@12
 
 The mink driver for the `BrowserTestBase` class still relies on some `SIMPLETEST_` environment variables. You can specify those prior to running the PHP Unit binary which will override the defaults provided by the configuration file we pass in.
 
-See a full [example](http://gitub.com/steveworley/restrict/blob/master/.travis.yml).
+See a full [example](http://github.com/steveworley/restrict/blob/master/.travis.yml).
 
 ### Gotchas
 
