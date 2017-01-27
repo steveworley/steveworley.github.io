@@ -10,7 +10,7 @@ layout: default
     {% include post/single.html %}
 
     {% if post.comments %}
-      {% include disqus.html %}
+      {% include disqus.html post=page %}
     {% endif %}
   </div>
 
