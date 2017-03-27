@@ -11,6 +11,11 @@
     </header>
 
     <section itemprop="description">
+
+      {% if post.lead %}
+        <p class="lead">{{ post.lead }}</p>
+      {% endif %}
+
       {{ content }}
     </section>
 
