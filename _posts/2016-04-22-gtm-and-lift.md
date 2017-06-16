@@ -36,11 +36,11 @@ Once the tag has been configured you then need to add the correct Lift event tra
 
 ##### **Track an event**
 
-``` html
+{% highlight html %}
 <script type="text/javascript">
   _tcaq.push(['captureView', '<event name>']);
 </script>
-```
+{% endhighlight %}
 
 _note: `<event name>` needs to be a valid event that has been previously created in Lift Web._
 
@@ -49,7 +49,7 @@ _note: `<event name>` needs to be a valid event that has been previously created
 
 ##### **Identify a user**
 
-``` html
+{% highlight html %}
 <script type="text/javascript">
   var name = document.querySelector('.name').value,
       email = document.querySelector('.email').value;
@@ -65,6 +65,6 @@ _note: `<event name>` needs to be a valid event that has been previously created
 
   _tcaq.push(['captureIdentity', name, 'name', {}, {identity: id}]);
 </script>
-```
+{% highlight %}
 
 - [For more information about the API](https://docs.acquia.com/lift/javascript/identity)

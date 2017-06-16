@@ -20,55 +20,55 @@ Travis CI allows you to commit a configuration file which will describe how your
 
 First you need to define your language and versions.
 
-``` yml
+{% highlight yml %}
 language: php
 php:
   - 5.6
   - 7
-```
+{% endhighlight %}
 
 This will tell Travis CI to build 2 environments (5.6 and 7) and perform your tests on both.
 
 Next, you should add [Composer's](http://getcomposer.org) vendor directory to the path so we can use Drush.
 
-``` yml
+{% highlight yml %}
 env:
   - PATH="$HOME/.composer/vendor/bin:$PATH"
-```
+{% endhighlight %}
 
 Travis will create new environments for each line in your environment variable section, this lets you tests a number of configurations. To define multiple environment variables for a single environment you separate them with a space.
 
 Then you define MySQL credentials just defining credentials is enough to tell Travis that it needs to install MySQL.
 
-``` yml
+{% highlight yml %}
 mysql:
   database: drupal
   username: root
   password:
-```
+{% endhighlight %}
 
 Travis provides a number of ways to [customise the build](https://docs.travis-ci.com/user/customizing-the-build) prior to running the tests. As we're going to be using Drush to install Drupal, this is a great place for ensuring it is available.
 
-``` yml
+{% highlight yml %}
 before_install:
   - composer self-update
   - composer global require drush/drush
-```
+{% endhighlight %}
 
 Now we can define the install steps for setting up Drupal.
 
-``` yml
+{% highlight yml %}
 install:
   - cd ..
   - composer create-project drupal-composer/drupal-project:8.x drupal --stability dev --no-interaction
   - mysql -e 'create database drupal;'
-```
+{% endhighlight %}
 
 By using composer to create a new Drupal project we get all the dev dependencies of the project. This is necessary as we need to use the bundled version of PHP Unit and not Travis' version.
 
 After we download Drupal and set up MySQL we need to install Drupal and move our project into the correct directory (`modules` for modules and `themes` for themes). This should still be in the `install` key of your YML file.
 
-``` yml
+{% highlight yml %}
   - mv [project] drupal/web/[directory]
   - cd drupal/web
   - drush --verbose site-install --db-url=mysql://root:@127.0.0.1/drupal --yes
@@ -77,15 +77,15 @@ After we download Drupal and set up MySQL we need to install Drupal and move our
   - sleep 5
   # Move back to the project root as script will be run from that directory.
   - cd ..
-```
+{% endhighlight %}
 
 When running functional tests we need to have a server available that can handle requests this is why we run `drush rs 8080 -` we sleep the process to ensure the server has enough time to start.
 
 We now have a PHP environment running the latest stable version of Drupal 8 and our project. The last thing we need to do is run the tests.
 
-``` yml
+{% highlight yml %}
 script: SIMPLETEST_BASE_URL=http://127.0.0.1:8080 SIMPLETEST_DB=mysql://root:@127.0.0.1/drupal vendor/bin/phpunit -c web/core/phpunit.xml.dist --group [project]
-```
+{% endhighlight %}
 
 The mink driver for the `BrowserTestBase` class still relies on some `SIMPLETEST_` environment variables. You can specify those prior to running the PHP Unit binary which will override the defaults provided by the configuration file we pass in.
 
