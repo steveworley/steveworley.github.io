@@ -67,4 +67,10 @@ article {
   img {
     max-width: 100%;
   }
+
+  figure {
+    margin: 0;
+    margin: 0 -100%;
+    margin: 0 calc(50% - 50vw);
+  }
 }
