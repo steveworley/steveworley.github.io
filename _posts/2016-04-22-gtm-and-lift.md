@@ -65,6 +65,6 @@ _note: `<event name>` needs to be a valid event that has been previously created
 
   _tcaq.push(['captureIdentity', name, 'name', {}, {identity: id}]);
 </script>
-{% highlight %}
+{% endhighlight %}
 
 - [For more information about the API](https://docs.acquia.com/lift/javascript/identity)

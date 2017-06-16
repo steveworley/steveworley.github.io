@@ -15,9 +15,9 @@ It turns out the friendly folks at Github have added a CSP ([Content Security Po
 
 Looking around for a solution I found out that you can control the CSP with a `http-equiv` meta tag- up until now I had always assumed that the CSP was sent a response header.
 
-``` html
+{% highlight html %}}
 <meta http-equiv="Content-Security-Policy" content="">
-```
+{% endhighlight %}
 
 Add the tag and define you CSP and you can then include cross-domain scripts. The next challenge was finding all the required domains to allow for including disqus. There didn't seem to be any good documentation around about what domains you needed to allow in your CSP.
 
