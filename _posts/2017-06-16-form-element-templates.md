@@ -20,9 +20,9 @@ Many CSS frameworks require nesting your input control elements inside the label
 
 In Drupal 8 there are 3 templates at work when rendering a form element.
 
-- form-element.html.twig
-- form-element-label.html.twig
-- input.html.twig
+- `form-element.html.twig`
+- `form-element-label.html.twig`
+- `input.html.twig`
 
 Unfortunately the form element templates do not have context of which type of form element is being rendered so you cannot simply add a `form-element-[type]` template file to your theme.
 
@@ -31,6 +31,8 @@ To do this you need to add theme hook suggestions and some additional data to th
 **MYTHEME.theme**
 
 {% highlight php %}
+
+<?php
 
 /**
  * Implements hook_theme_suggestions_HOOK_alter().
