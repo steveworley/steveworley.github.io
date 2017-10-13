@@ -29,7 +29,7 @@ FROM node
 
 This query doesn't tell us much, other than it is select all fields from our users table. If we're inspecting the slow query log we can see that this query is slow but we can't see where this query comes from. This is where comments can help, we can use `hook_query_alter` to add some information like:
 
-{% highlihgt php %}
+{% highlight php %}
 $query->comment('module:my_module|function:' . __CLASS__ . '::' . __METHOD__);
 {% endhighlight %}
 

@@ -44,9 +44,9 @@ class ClassTest extends UnitTestCase {
 
 This will actually result in an error because our container is not instantiated correctly.
 
-{% highlight %}
+```
 $ \Drupal::$container is not initialized yet. \Drupal::setContainer() must be called with a real container.
-{% endhighlight %}
+```
 
 ## What gives?
 
