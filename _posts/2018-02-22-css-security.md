@@ -27,13 +27,15 @@ Well to put simply, we can't prevent a browser extension from include styles int
 
 ![CSP Blocking](/img/csp-blocking.png)
 
-```
+{% highlight json }
 Content-Security-Policy: default 'none' img-src 'self'
-```
+{% endhighlight %}
 
 ## Will this protect 100%?
 
 Using a CSP will prevent remote access to images and will mitigate this type of attack. However there are other ways for browser extensions to make external requests. An extension typically runs in two states - background and page. The CSP is only applied to the page level actions of the extension. Using the example repository; this is how the stylesheet is sent to the page regardless of your CSP- the browser will inject the stylesheet regardless, once it has everything in the stylesheet will fall under the page scope and will be affected by your CSP. In the spirit of full disclosure there are still workarounds for the nefarious extensions, [this medium post outlines](https://medium.com/kifi-engineering/dont-let-a-content-security-policy-your-extension-s-images-e062d6b88eac) one way of getting around the CSP using the background scope to build a `base64encoded` image.
+
+While this doesn't fully prevent browser extensions; it can help protect your developers. With the growing ecosystem of frontend packages there is an ever increasing chance that a particular package might be doing something it shouldn't be. This will help ensure that your code base is protected.
 
 In conclusion- a CSP will help mitigate odd behaviour from user devices; while it is not infalible it definitely makes sense to maintain one for your web pressence so you can help to ensure the safety of your visitors.
 
