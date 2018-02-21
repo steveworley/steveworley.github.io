@@ -23,13 +23,13 @@ The attack uses CSS3 pseudo selectors which allow us to target particular attrib
 
 ## How do we prevent this?
 
-Well to put simply, we can't prevent a browser extension from include styles into our page. But we can prevent the browser extension from requesting images. By default the CSP will allow all remote assets, we can simply serve a stricter CSP with our pages to ensure that we control which asset resources the browser has access to. Background images in CSS rely on the `img-src` directive in the CSP.
+Well to put it simply, we can't prevent a browser extension from including styles into our page. But we can prevent the browser extension from requesting images. The default browser behaviour will allow all remote assets so we need to deliver a stricter CSP with our repsonse to ensure that we control which resources the browser has access to. Background images in CSS rely on the `img-src` directive in the CSP.
 
 ![CSP Blocking](/img/csp-blocking.png)
 
-{% highlight json }
+```
 Content-Security-Policy: default 'none' img-src 'self'
-{% endhighlight %}
+```
 
 ## Will this protect 100%?
 
