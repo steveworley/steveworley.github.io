@@ -86,8 +86,10 @@ Metadata can be used much the same way as query tagging however metadata surroun
 The query object provides utility methods for accessing and updating a queries metadata; `addMetaData`, `getMetaData` respectively.
 
 {% highlight php %}
+
 $query->addMetaData('node', $node);
 $query->getMetaData('node'); // \Drupal\Entity\Node;
+
 {% endhighlight %}
 
 ## Practical examples
