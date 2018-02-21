@@ -3,7 +3,6 @@ layout: post
 title: CSS Keylogging and how to protect yourself
 comments: true
 disqus_id: css-keylogging-security
-lead: "A good reason to employ CSPs to protect your customers"
 tags:
   - CSS
   - Security
@@ -19,7 +18,7 @@ Let's analyse what is happening in the example and understand why a CSP prevents
 
 ![React components](/img/login-value-update.png)
 
-The attack uses CSS3 pseudo selectors which allow us to target particular attributes; for example the `value` attribute. So the attacker simply includes a stylesheet that has a series of `input[type="password][value="a"]` style definitions that update the background image of the element to a remote destination; in the example `http://localhost:3000/a`. With some smarts on the logging server you could piece the requests back together and find a password.
+The attack uses CSS3 pseudo selectors which allow us to target particular attributes; for example the `value` attribute. So the attacker simply includes a stylesheet that has a series of `input[type="password][value$={alpha}]` style definitions. These instruct the browser to update the style if the value ends with the given letter it will then update the background image to a remote destination; in the example `http://localhost:3000/{alpha}`. With some smarts on the logging server you could piece the requests back together and find a password.
 
 ## How do we prevent this?
 
